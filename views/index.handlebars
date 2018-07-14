@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel= "icon" href = "assets/img/favicon.png" type="image/gif" sizes="16X16">
+<meta charset="UTF-8">
+<!--Fonts--> 
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="/assets/css/landingpage.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/sidebar.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> Cook or Die </title>
+
+<!-- Makeshift Pizza Button-->
+    <style type = "text/css"> 
+    img{width:400px; height:400px; border:10px;} 
+    .show{display:block;}
+     .hide{display:none;}
+</style>
+<script type="text/javascript">
+function showImg()
+{
+var obj=document.getElementById('/assets/img/pizza.jpg');
+obj.className ='show';
+}
+</script>
+</head>
+<body>
+<!--- Navi -->
+<body>
+        <div class="icon-bar">
+          <a class="active" href="#"><i class="fa fa-home"></i></a> 
+          <a href=""><i class="fa fa-search"></i>Recipes</a> 
+          <a href="https://www.justonecookbook.com/"><i class="fa fa-envelope"></i>Blog</a> 
+          <a href="/profile"><i class="fa fa-globe"></i>Profile</a>
+          <a href=""><i class="fa fa-trash"></i></a> 
+        </div>
+        
+ </body>
+  <!-- Sidebar Widgets Column -->
+<div class="col-md-4">
+    
+<!-- Search Widget -->
+              <div>
+					<h1>What's in the Fridge?</h1>
+					<table class="table table-striped">
+						<tbody>
+							<tr id="form-row">
+								<form id="ingredient-form">
+									<td colspan="4">
+										<input placeholder="Enter an Ingredient" id="ingredient" type="text" />
+									</td>
+									<td><button type="submit" class="btn btn-success">Add Ingredient</button>
+								 <button class="btn btn-secondary" type="button" onclick="showImg()"> Search</button>
+                	</td>
+								</form>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+              {{!-- <div class="card my-4">
+                <h5 class="card-header">What's in the fridge?</h5>
+                <div class="card-body">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-secondary" id="ingredient" type="button"> Add Ingredient!</button>
+                      <button class="btn btn-secondary" type="button" onclick="showImg()"> Search</button>
+                    </span>
+                  </div>
+                </div>
+              </div> --}}
+    
+              <!-- Side Widget -->
+              <div class="card my">
+            <h5 class="card-header">Ingredients</h5>
+            <div class="card-body" id="ingredient-form">
+              <ul>
+                {{#each ingredients}}
+                  <li>
+                    <p>name: {{name}}</p>
+                    <a href="/recipes/{{id}}">Ingredient Details</a>
+                    <button type="submit" id="delete-ingredient" class="delete-ingredient">Delete</button>
+                    <input type="checkbox" class="ingredient-check" value="{{id}}">
+                  </li>
+                {{/each}}
+              </ul>         
+              <button class='submit-recipe-button'>Get Ingredients</button>   
+            </div>
+          </div>
+        </div>
+        
+        
+    </div>
+    <!-- Page Content -->
+    <div class="container1">
+{{!-- <img id="pizza.jpg" src="/assets/img/pizza.jpg" class="hide"> 
+<img src="/assets/img/Card for Example.png" alt= "eggs" width="500" height="600"> --}}
+<br/> 
+</html> 
+    <div class="row">
+          <!-- Blog Post -->
+          <div class="container">
+            <div class="card-body">
+          </div>
+        </div>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Recipes</h1>
+          <ul>
+            {{#each recipe}}
+              <li>
+                <p>name: {{name}}</p>
+                <a href="/recipes/{{id}}">Recipe Details</a>
+              </li>
+            {{/each}}
+          </ul>
+          
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/recipes.js"></script>
+  </body>
+</html>

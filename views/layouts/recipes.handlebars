@@ -1,0 +1,60 @@
+{{!-- <div class="container row">
+
+  This is the Burger activity handlebars shit, so it's a good example of how to use handlebars.
+  
+
+
+  <div class="container col-lg-8 col-md-12 col-sm-12 col-xs-12">
+    <div class="container">
+
+
+      <div class="card order-cards mw-100">
+        <div class="card-header text-center">
+          <h2>Ingredients: </h2>
+          <input type="text" id="ingredient" name="name">
+        </div>
+
+        <div class="card-body">
+          <ul class="list-unstyled">
+            
+            
+            {{#each burgers}}
+            {{#if orderUp}}
+              <li>
+              
+                {{id}} : {{name}}
+                <br>
+                <button class="change-order btn btn-primary" data-id="{{this.id}}" data-neworder="{{orderUp}}">Deliver</button>
+              
+              </li>
+            {{/if}} 
+            {{/each}}
+          
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="card order-cards" >
+        <div class="card-header text-center">
+          <h2>Recipes: </h2>
+        </div>
+
+        <div class="card-body">
+          <ul class="list-unstyled">
+            {{#each burgers}}
+              {{#unless orderUp}}
+                {{id}} : {{name}}
+                <br>
+                <button class="change-order btn btn-danger" data-id="{{this.id}}" data-neworder="{{orderUp}}">Ugh, gross! Send it back!</button>
+                <button class="delete-burger btn btn-warning devour" data-id="{{this.id}}">Eat da Burger!</button>
+              {{/unless}}   
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div> --}}

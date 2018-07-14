@@ -1,0 +1,46 @@
+body {
+    background-image: url("/assets/img/bamboo cutting board.jpg");
+    font-family: 'Permanent Marker', cursive;
+    box-sizing: border-box;
+  
+}
+.container1 {
+    padding: 75px 120px 30px;
+}
+.col-md-4 {
+    position: absolute;
+    top:0;
+    right:0;
+    box-sizing: border-box;
+    width: auto;
+    margin: auto;
+    max-width: 1500px;
+    padding: 120px 30px;
+};
+.icon-bar {
+    background-color: #555;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    }
+}
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    }
+}
+.icon-bar a:hover {
+    background-color: #000;
+}
+.active {
+    background-color: #4CAF50 !important;
+}
