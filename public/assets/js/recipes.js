@@ -6,6 +6,7 @@ $(document).ready(function() {
     var ingredientList = $(".tbody");
     var ingredientContainer = $(".ingredient-form");
     var ingredientsArray = [];
+    var recipeResult = $("#recipe-result");
 
     //push ingredient IDs into an ingredients array
     $('.ingredient-check').on('change', function(e) {
@@ -24,7 +25,18 @@ $(document).ready(function() {
         }).then(function(data){
             /* Loop through the recipe data you received back, and insert
             it into the DOM */
-            console.log(data)
+            // console.log("Hello" + data);
+                recipeResult.html("");
+                recipeResult.append("<h2>" +data[0].name+ "</h2>");
+                
+
+
+
+
+
+
+
+
             // $.get("/api/recipes/", function(data) {
             //     $.each(data);
             // });
